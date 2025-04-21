@@ -2,7 +2,10 @@
 
 ## **Declarative vs Imperative UI**
 
-Welcome to **Branch 3.1** of the **React Lab**!
+Welcome to **Branch 3.1 - 3.** of the **React Lab**!
+
+> [!Note]
+> This is a merged branch
 
 In this branch, You'll gain a clear understanding of the **declarative UI paradigm** in React and how it differs from the imperative approach. Learn how React State enables smooth handling of user input, leading to a more interactive and maintainable UI through practical examples.
 
@@ -10,15 +13,16 @@ In this branch, You'll gain a clear understanding of the **declarative UI paradi
 
 ## **Branch Organization**
 
-This branch includes:
+This merged branch includes:
 
-- **Concepts & Theory**: This branch focuses on conceptual and theoretical explanations rather than code examples.
+- **Concepts & Theory**: This merged branch focuses on conceptual and theoretical explanations rather than code examples.
 - **Important Links**:
 
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
   - <a href='https://react.dev/learn/reacting-to-input-with-state#how-declarative-ui-compares-to-imperative'>How Declarative UI Compares to Imperative</a>
   - <a href='https://react.dev/learn/reacting-to-input-with-state#thinking-about-ui-declaratively'>Thinking About UI Declaratively</a>
+  - <a href='https://react.dev/learn/reacting-to-input-with-state#step-3-represent-the-state-in-memory-with-usestate'>Represent the state in memory with useState</a>
 
   </div>
 
