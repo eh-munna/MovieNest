@@ -2,7 +2,7 @@
 
 ## **Declarative vs Imperative UI**
 
-Welcome to **Branch 3.1 - 3.** of the **React Lab**!
+Welcome to **Branch 3.1 - 3.3 ** of the **React Lab**!
 
 > [!Note]
 > This is a merged branch
