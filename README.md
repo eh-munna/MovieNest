@@ -1,28 +1,28 @@
 # **React Lab** ![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=%2361DAFB)
 
-## **Declarative vs Imperative UI**
+## **Structuring state**
 
-Welcome to **Branch 3.1 - 3.3 ** of the **React Lab**!
+Welcome to **Branch 3.4** of the **React Lab**!
 
-> [!Note]
-> This is a merged branch
-
-In this branch, You'll gain a clear understanding of the **declarative UI paradigm** in React and how it differs from the imperative approach. Learn how React State enables smooth handling of user input, leading to a more interactive and maintainable UI through practical examples.
+In this branch, will look at the necessity of selecting an appropriate React state structure, with a focus on grouping relevant state variables. Learn how to improve the clarity and structure of your React components by arranging state so that relevant data is properly grouped together.
 
 ---
 
 ## **Branch Organization**
 
-This merged branch includes:
+This branch includes:
 
-- **Concepts & Theory**: This merged branch focuses on conceptual and theoretical explanations rather than code examples.
-- **Important Links**:
+**Clarifications of**
+
+- When to use a single vs multiple state variables
+- What to avoid when organizing state
+
+**Important Links**:
 
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
-  - <a href='https://react.dev/learn/reacting-to-input-with-state#how-declarative-ui-compares-to-imperative'>How Declarative UI Compares to Imperative</a>
-  - <a href='https://react.dev/learn/reacting-to-input-with-state#thinking-about-ui-declaratively'>Thinking About UI Declaratively</a>
-  - <a href='https://react.dev/learn/reacting-to-input-with-state#step-3-represent-the-state-in-memory-with-usestate'>Represent the state in memory with useState</a>
+- <a href='https://react.dev/learn/choosing-the-state-structure#principles-for-structuring-state'>Principles for structuring state</a>
+- <a href='https://react.dev/learn/choosing-the-state-structure#group-related-state'>Group related state</a>
 
   </div>
 
@@ -47,7 +47,7 @@ Follow these steps to explore the **Declarative vs Imperative UI** module:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout 3.1
+   git checkout 3.4
    ```
 
 4. **Install dependencies:**
