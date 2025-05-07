@@ -1,39 +1,28 @@
 # **React Lab** ![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=%2361DAFB)
 
-## **Choosing the State Structure**
+## **Avoid Deeply Nested State**
 
-Welcome to **Branch 3.5 - 3.7 ** of the **React Lab**!
+Welcome to **Branch 3.8 ** of the **React Lab**!
 
-> [!Note]
-> This is a merged branch
-
-In this branch, we'll look at how to choose the proper state structure for your React components while avoiding state conflicts. Learn how to keep your application's state consistent and coherent by avoiding conflicting or contradicting state definitions.
+In this branch, we'll explore the importance of choosing a well-organized React state structure by avoiding deep nesting. Learn how to maintain simplicity and readability in your React components by structuring state in a way that minimizes unnecessary nesting and complexity.
 
 ---
 
 ## **Branch Organization**
 
-This merged branch includes:
+### **Resources:**
 
-**Clarifications of**
-
-- Group related state
-- What to avoid when organizing state
-
-**Important Links**:
+1. **Official Documentation:**
 
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
-- <a href='https://react.dev/learn/choosing-the-state-structure#avoid-contradictions-in-state'>Avoid contradictions in state</a>
-- <a href='https://react.dev/learn/choosing-the-state-structure#avoid-redundant-state'>Avoid redundant state</a>
-- <a href='https://react.dev/learn/choosing-the-state-structure#avoid-duplication-in-state'>Avoid duplication in state</a>
-  </div>
+- <a href='https://react.dev/learn/choosing-the-state-structure#avoid-deeply-nested-state'>Way to avoid deeply nested object</a>
 
 ---
 
-## **How to Use This Branch**
+### **How to Use This Branch**
 
-Follow these steps to explore the **Declarative vs Imperative UI** module:
+Follow these steps to run this branch in your machine:
 
 1. **Clone the repository:**
 
@@ -50,7 +39,7 @@ Follow these steps to explore the **Declarative vs Imperative UI** module:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout 3.5
+   git checkout 3.8
    ```
 
 4. **Install dependencies:**
