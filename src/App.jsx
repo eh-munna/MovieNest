@@ -1,41 +1,45 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import Tasks from './components/Tasks';
 import { initialTasks } from './data/initialTasks';
+import tasksReducer from './reducers/tasksReducer';
 
 export default function App() {
-  const [tasks, setTasks] = useState(initialTasks);
+  const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
+
+  const getTaskId = (tasks) => {
+    const nextId = tasks.reduce((prevTask, currentTask) =>
+      prevTask && prevTask.id > currentTask.id ? prevTask.id : currentTask.id
+    );
+    return nextId + 1;
+  };
 
   const handleAddTask = (newTask) => {
-    setTasks([
-      ...tasks,
-      {
-        id: tasks.length + 1,
-        text: newTask,
-        done: false,
-      },
-    ]);
+    dispatch({
+      type: 'add-task',
+      id: getTaskId(tasks),
+      text: newTask,
+    });
   };
 
   const handleEditTask = (taskId, task) => {
-    const updatedTasks = tasks.map((t) => {
-      if (t.id === task.taskId) {
-        return task;
-      } else {
-        return t;
-      }
+    dispatch({
+      type: 'edit-task',
+      id: taskId,
+      task: task,
     });
-    setTasks(updatedTasks);
   };
 
   const handleDeleteTask = (taskId) => {
-    setTasks(tasks.filter((task) => task.id !== taskId));
+    dispatch({
+      type: 'delete-task',
+      id: taskId,
+    });
   };
 
   console.log('Current tasks:', tasks);
 
   return (
     <>
-      {/* <div className="text-red-400 flex flex-col space-y-4 w-1/2 gap-6 mx-auto justify-center items-center min-h-[75vh]"> */}
       <div className="text-red-400 flex flex-col">
         <Tasks
           tasks={tasks}
