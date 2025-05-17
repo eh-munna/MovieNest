@@ -1,14 +1,19 @@
 # **React Lab** ![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=%2361DAFB)
 
-## **Avoid Deeply Nested State**
+## **Sharing State Between Components**
 
-Welcome to **Branch 3.8 ** of the **React Lab**!
+Welcome to **Branch 3.9 ** of the **React Lab**!
 
-In this branch, we'll explore the importance of choosing a well-organized React state structure by avoiding deep nesting. Learn how to maintain simplicity and readability in your React components by structuring state in a way that minimizes unnecessary nesting and complexity.
+In this branch, we'll learn about the dynamic world of sharing state between React components. Learn effective ways for passing and managing state between components, allowing for seamless communication and synchronization in your React apps.
 
 ---
 
 ## **Branch Organization**
+
+### **_What has been covered_**
+
+- How to share state between components by lifting it up
+- What are controlled and uncontrolled components
 
 ### **Resources:**
 
@@ -16,7 +21,7 @@ In this branch, we'll explore the importance of choosing a well-organized React 
 
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
-- <a href='https://react.dev/learn/choosing-the-state-structure#avoid-deeply-nested-state'>Way to avoid deeply nested object</a>
+- <a href='https://react.dev/learn/sharing-state-between-components'>Sharing State Between Components</a>
 
 ---
 
@@ -39,7 +44,7 @@ Follow these steps to run this branch in your machine:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout 3.8
+   git checkout 3.9
    ```
 
 4. **Install dependencies:**
