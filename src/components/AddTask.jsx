@@ -1,8 +1,13 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useTasks, useTasksDispatch } from '../contexts/TasksProvider';
+import { getTaskId } from '../utils/utils';
 
-export default function AddTask({ onAddTask }) {
+export default function AddTask() {
   const [newTask, setNewTask] = useState('');
+
+  const tasks = useTasks();
+  const dispatch = useTasksDispatch();
+
   return (
     <>
       <input
@@ -14,8 +19,17 @@ export default function AddTask({ onAddTask }) {
       />
       <button
         onClick={() => {
+          if (newTask.length === 0) {
+            alert('Task cannot be empty');
+            return;
+          }
+          dispatch({
+            type: 'add-task',
+            id: getTaskId(tasks),
+            text: newTask,
+          });
+
           setNewTask('');
-          onAddTask(newTask);
         }}
       >
         Add Task
@@ -23,7 +37,3 @@ export default function AddTask({ onAddTask }) {
     </>
   );
 }
-
-AddTask.propTypes = {
-  onAddTask: PropTypes.func.isRequired,
-};

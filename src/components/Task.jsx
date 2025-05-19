@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useTasksDispatch } from '../contexts/TasksProvider';
 
-export default function Task({ task, onEditTask, onDeleteTask }) {
+export default function Task({ task }) {
   const [isEditing, setIsEditing] = useState(false);
 
-
-  
+  const dispatch = useTasksDispatch();
 
   let taskContent;
 
@@ -13,9 +13,17 @@ export default function Task({ task, onEditTask, onDeleteTask }) {
     taskContent = (
       <>
         <input
-          onChange={(e) =>
-            onEditTask(task.id, { ...task, text: e.target.value })
-          }
+          onChange={(e) => {
+            if (e.target.value.length === 0) {
+              alert('Task cannot be empty');
+              return;
+            }
+            dispatch({
+              type: 'edit-task',
+              id: task.id,
+              task: { ...task, text: e.target.value },
+            });
+          }}
           className="mr-2"
           type="text"
           value={task.text}
@@ -39,11 +47,23 @@ export default function Task({ task, onEditTask, onDeleteTask }) {
           type="checkbox"
           checked={task.done}
           onChange={(e) => {
-            onEditTask(task.id, { ...task, done: e.target.checked });
+            dispatch({
+              type: 'edit-task',
+              id: task.id,
+              task: { ...task, done: e.target.checked },
+            });
           }}
         />
         {taskContent}
-        <button className="ml-2" onClick={() => onDeleteTask(task.id)}>
+        <button
+          className="ml-2"
+          onClick={() =>
+            dispatch({
+              type: 'delete-task',
+              id: task.id,
+            })
+          }
+        >
           Delete
         </button>
       </li>
@@ -59,6 +79,4 @@ Task.propTypes = {
     text: PropTypes.string.isRequired,
     done: PropTypes.bool.isRequired,
   }).isRequired,
-  onEditTask: PropTypes.func.isRequired,
-  onDeleteTask: PropTypes.func.isRequired,
 };

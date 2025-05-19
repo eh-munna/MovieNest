@@ -1,10 +1,10 @@
 # **React Lab** ![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=%2361DAFB)
 
-## **Three steps to Consolidate state logic with a reducer**
+## **Scaling Up with Reducer and Context**
 
-Welcome to **Branch 3.13 ** of the **React Lab**!
+Welcome to **Branch 3.20 ** of the **React Lab**!
 
-In this branch, we've explore advanced strategies to extract Logic into a Reducer." It is an important practice for improving the efficiency and maintainability of your React apps.
+In this branch, we've learned effective techniques for using the Reducer and Context combo to scale up our React application. Learn cutting-edge state management strategies that will enable our components to effectively handle complicated data flows.
 
 ---
 
@@ -12,8 +12,9 @@ In this branch, we've explore advanced strategies to extract Logic into a Reduce
 
 ### **_What has been covered_**
 
-- Explain What a reducer function is & how to refactor useState to useReducer
-- Differences between useState and useReducer hook
+- How to combine a reducer with context
+- How to avoid passing state and dispatch through props
+- How to keep context and state logic in a separate file
 
 ### **Resources:**
 
@@ -21,7 +22,8 @@ In this branch, we've explore advanced strategies to extract Logic into a Reduce
 
   <div style="display: flex; flex-direction: column; gap: 20px;">
 
-- <a href='https://react.dev/learn/extracting-state-logic-into-a-reducer#consolidate-state-logic-with-a-reducer'>Consolidate state logic with a reducer</a>
+- <a href='https://react.dev/learn/scaling-up-with-reducer-and-context#combining-a-reducer-with-context'>Combining a reducer with context</a>
+- <a href='https://react.dev/learn/scaling-up-with-reducer-and-context#moving-all-wiring-into-a-single-file'>Moving all wiring into a single file</a>
 
 ---
 
@@ -44,7 +46,7 @@ Follow these steps to run this branch in your machine:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout 3.13
+   git checkout 3.20
    ```
 
 4. **Install dependencies:**
