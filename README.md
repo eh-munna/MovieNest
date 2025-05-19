@@ -1,59 +1,62 @@
-# **React Lab** ![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=%2361DAFB)
+# **🎬 MovieNest**
 
-## **MovieNest: Your One-Stop React App for Movie Magic and Rentals**
+![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=%2361DAFB)
 
-Welcome to **Branch 3.21 ** of the **React Lab**!
-
-In this branch, we've built a fascinating project that makes use of Reducer and the React Context API.
+> **Your One-Stop React App for Movie Magic and Rentals**
 
 ---
 
-## **Branch Organization**
+## 📌 Project Overview
 
-### **_What has been covered_**
+**MovieNest** is a hands-on React project where I explored advanced concepts such as the **Reducer pattern** and **React Context API**. This project is part of my journey through React’s official documentation, aimed at gaining deep, practical understanding by combining **state management** and **component sharing**.
 
-- How to combine a reducer with context
+In this project, I focused on:
 
-### **Resources:**
-
-1. **Official Documentation:**
-
-  <div style="display: flex; flex-direction: column; gap: 20px;">
-
-- <a href='https://react.dev/learn/scaling-up-with-reducer-and-context#combining-a-reducer-with-context'>Combining a reducer with context</a>
-- <a href='https://react.dev/learn/scaling-up-with-reducer-and-context#moving-all-wiring-into-a-single-file'>Moving all wiring into a single file</a>
+- Combining a **Reducer** with **Context**
+- Managing **global state** efficiently
+- Organizing React logic into a single, maintainable file
 
 ---
 
-### **How to Use This Branch**
+## 🌐 Project Live
 
-Follow these steps to run this branch in your machine:
+[Movie Nest Live On](https://movie-nest-olive.vercel.app/)
+
+## 📚 Learning Resources
+
+All concepts and implementations are based on React’s official documentation:
+
+- [Combining a reducer with context](https://react.dev/learn/scaling-up-with-reducer-and-context#combining-a-reducer-with-context)
+- [Moving all wiring into a single file](https://react.dev/learn/scaling-up-with-reducer-and-context#moving-all-wiring-into-a-single-file)
+
+You can also check out my broader learning repository here:
+🔗 [React Lab](https://github.com/eh-munna/react-lab)
+
+---
+
+## 🚀 Getting Started
+
+To run this branch (`main`) locally:
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/eh-munna/react-lab.git
+   git clone https://github.com/eh-munna/MovieNest
    ```
 
-2. **Navigate to the repository folder:**
+2. **Navigate into the project folder:**
 
    ```bash
-   cd react-lab
+   cd MovieNest
    ```
 
-3. **Switch to this branch:**
-
-   ```bash
-   git checkout 3.21
-   ```
-
-4. **Install dependencies:**
+3. **Install all dependencies:**
 
    ```bash
    npm install
    ```
 
-5. **Run the app:**
+4. **Start the development server:**
 
    ```bash
    npm run dev
@@ -61,18 +64,10 @@ Follow these steps to run this branch in your machine:
 
 ---
 
-## **Reach Out to Me**
+## 🙋‍♂️ Let's Connect!
 
-Feel free to connect on any of these platforms:
+If you're learning React too, working on similar projects, or just want to chat—feel free to reach out:
 
-<div style="display: flex; gap: 20px;">
-   <a href="https://www.linkedin.com/in/eh-munna/">
-      <img src="https://img.shields.io/badge/LinkedIn-%230A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
-   </a>
-   <a href="https://github.com/eh-munna">
-      <img src="https://img.shields.io/badge/GitHub-%23121011?style=flat&logo=github&logoColor=white" alt="GitHub">
-   </a>
-   <a href="mailto:emran.h.munna@gmail.com">
-      <img src="https://img.shields.io/badge/emran.h.munna@gmail.com-%23D14836?style=flat&logo=gmail&logoColor=white" alt="Email">
-   </a>
-</div>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eh-munna/)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011?style=flat&logo=github&logoColor=white)](https://github.com/eh-munna)
+[![Email](https://img.shields.io/badge/emran.h.munna@gmail.com-%23D14836?style=flat&logo=gmail&logoColor=white)](mailto:emran.h.munna@gmail.com)
