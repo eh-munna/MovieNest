@@ -1,8 +1,3 @@
-export const getTaskId = (tasks) => {
-  const nextId = tasks.reduce(
-    (prevTask, currentTask) =>
-      prevTask && prevTask.id > currentTask.id ? prevTask.id : currentTask.id,
-    0
-  );
-  return nextId + 1;
+export const imgUrl = (url) => {
+  return new URL(`../assets/${url}`, import.meta.url).href;
 };

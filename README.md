@@ -1,10 +1,10 @@
 # **React Lab** ![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=%2361DAFB)
 
-## **Scaling Up with Reducer and Context**
+## **MovieNest: Your One-Stop React App for Movie Magic and Rentals**
 
-Welcome to **Branch 3.20 ** of the **React Lab**!
+Welcome to **Branch 3.21 ** of the **React Lab**!
 
-In this branch, we've learned effective techniques for using the Reducer and Context combo to scale up our React application. Learn cutting-edge state management strategies that will enable our components to effectively handle complicated data flows.
+In this branch, we've built a fascinating project that makes use of Reducer and the React Context API.
 
 ---
 
@@ -13,8 +13,6 @@ In this branch, we've learned effective techniques for using the Reducer and Con
 ### **_What has been covered_**
 
 - How to combine a reducer with context
-- How to avoid passing state and dispatch through props
-- How to keep context and state logic in a separate file
 
 ### **Resources:**
 
@@ -46,7 +44,7 @@ Follow these steps to run this branch in your machine:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout 3.20
+   git checkout 3.21
    ```
 
 4. **Install dependencies:**
