@@ -1,6 +1,7 @@
+import { Star } from 'lucide-react';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { useCart } from '../contexts/MoviesProvider';
+import { useCart } from '../contexts';
 import MovieModal from './MovieModal';
 
 export default function Movie({ movie }) {
@@ -18,25 +19,28 @@ export default function Movie({ movie }) {
         <MovieModal movie={movie} onClose={() => setShowModal(false)} />
       )}
 
-      <div className="flex flex-col justify-between border border-indigo-300 p-4 rounded-md h-full bg-white shadow-md">
+      <div className="flex flex-col justify-between border border-indigo-300 p-4 rounded-md h-full bg-white dark:bg-gray-900 shadow-md">
         {/* Top section: Title, rating, image */}
         <div className="text-orange-300 mb-4">
           <h2 className="text-xl font-bold mb-2">{movie.name}</h2>
-          <p className="text-orange-600 mb-2 flex items-center gap-1">
-            <span className="">⭐️</span>
-            <span>{movie.rating} </span>
-          </p>
+
           <img
             src={movie.imgSource}
             alt={movie.name}
-            className="w-full h-48 object-cover rounded"
+            className="w-full h-48 object-cover rounded-sm"
           />
+          <p className="text-orange-600 mt-2 flex items-center gap-1">
+            <span className="">
+              <Star />
+            </span>
+            <span>{movie.rating} </span>
+          </p>
         </div>
 
         {/* Bottom section: Buttons */}
         <div className="mt-auto flex flex-col gap-3">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm"
             onClick={() => handleModalOpen()}
           >
             Show Details
@@ -56,7 +60,7 @@ export default function Movie({ movie }) {
                   payload: movie,
                 });
               }}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm"
             >
               Rent Now
             </button>

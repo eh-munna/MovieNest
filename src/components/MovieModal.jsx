@@ -5,7 +5,7 @@ export default function MovieModal({ movie, onClose }) {
     <>
       <div
         onClick={onClose}
-        className="fixed inset-0 flex flex-col w-screen h-screen items-center justify-center bg-black/60 backdrop-blur-sm"
+        className="fixed inset-0 flex flex-col w-screen h-screen items-center justify-center bg-black/60 backdrop-blur-xs"
       >
         <div
           onClick={(e) => e.stopPropagation()}
@@ -18,7 +18,7 @@ export default function MovieModal({ movie, onClose }) {
             <p className="text-gray-600">{movie.description}</p>
             <button
               onClick={onClose}
-              className="cursor-pointer mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="cursor-pointer mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm"
             >
               Close
             </button>
