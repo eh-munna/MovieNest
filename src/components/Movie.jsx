@@ -1,16 +1,33 @@
 import { Star } from 'lucide-react';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { useCart } from '../contexts';
+import { Bounce, toast } from 'react-toastify';
+import { useCart, useTheme } from '../contexts';
 import MovieModal from './MovieModal';
 
 export default function Movie({ movie }) {
   const { cart, dispatch } = useCart();
-
+  const { darkMode } = useTheme();
   const [showModal, setShowModal] = useState(false);
 
-  const handleModalOpen = () => {
-    setShowModal(true);
+  const handleAddToCart = () => {
+    const isInCart = cart.some((item) => item.id === movie.id);
+    if (isInCart) {
+      toast.error(`${movie.name} is already in the cart`, {
+        position: 'bottom-right',
+        autoClose: 2000,
+        theme: darkMode ? 'dark' : 'light',
+        transition: Bounce,
+      });
+    } else {
+      dispatch({ type: 'add-to-cart', payload: movie });
+      toast.success(`${movie.name} has been added to the cart!`, {
+        position: 'bottom-right',
+        autoClose: 2000,
+        theme: darkMode ? 'dark' : 'light',
+        transition: Bounce,
+      });
+    }
   };
 
   return (
@@ -19,48 +36,42 @@ export default function Movie({ movie }) {
         <MovieModal movie={movie} onClose={() => setShowModal(false)} />
       )}
 
-      <div className="flex flex-col justify-between border border-indigo-300 p-4 rounded-md h-full bg-white dark:bg-gray-900 shadow-md">
-        {/* Top section: Title, rating, image */}
-        <div className="text-orange-300 mb-4">
-          <h2 className="text-xl font-bold mb-2">{movie.name}</h2>
+      <div className="flex flex-col justify-between h-full border border-indigo-200 dark:border-indigo-400 rounded-lg p-4 shadow-sm bg-white dark:bg-gray-800 transition duration-200">
+        {/* Movie Header */}
+        <div>
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2 truncate">
+            {movie.name}
+          </h2>
 
           <img
             src={movie.imgSource}
             alt={movie.name}
-            className="w-full h-48 object-cover rounded-sm"
+            className="w-full h-48 object-cover rounded-md mb-2"
           />
-          <p className="text-orange-600 mt-2 flex items-center gap-1">
-            <span className="">
-              <Star />
-            </span>
-            <span>{movie.rating} </span>
-          </p>
+
+          <div className="flex items-center text-orange-600 dark:text-orange-400">
+            <Star className="w-4 h-4 mr-1" />
+            <span>{movie.rating}</span>
+          </div>
         </div>
 
-        {/* Bottom section: Buttons */}
-        <div className="mt-auto flex flex-col gap-3">
+        {/* Movie Footer */}
+        <div className="mt-4 flex flex-col gap-3">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm"
-            onClick={() => handleModalOpen()}
+            className="cursor-pointer w-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 rounded-md transition"
+            onClick={() => setShowModal(true)}
           >
             Show Details
           </button>
 
           <div className="flex justify-between items-center">
-            <span className="text-orange-600">Rent for €{movie.price}</span>
+            <span className="text-sm text-orange-600 dark:text-orange-400 font-semibold">
+              Rent for €{movie.price}
+            </span>
+
             <button
-              onClick={() => {
-                const isMovieInCart = cart.some((item) => item.id === movie.id);
-                if (isMovieInCart) {
-                  alert('Movie already in cart');
-                  return;
-                }
-                dispatch({
-                  type: 'add-to-cart',
-                  payload: movie,
-                });
-              }}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm"
+              onClick={handleAddToCart}
+              className="cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 px-4 rounded-md transition"
             >
               Rent Now
             </button>

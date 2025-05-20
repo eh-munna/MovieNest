@@ -2,30 +2,40 @@ import PropTypes from 'prop-types';
 
 export default function MovieModal({ movie, onClose }) {
   return (
-    <>
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+    >
       <div
-        onClick={onClose}
-        className="fixed inset-0 flex flex-col w-screen h-screen items-center justify-center bg-black/60 backdrop-blur-xs"
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 w-[90vw] max-w-lg max-h-[85vh] overflow-y-auto rounded-xl shadow-2xl p-6 sm:p-8 transition-all"
       >
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-4 max-h-[90vh] overflow-auto max-w-md w-full shadow-lg"
-        >
-          <div className="bg-white rounded-lg p-4 shadow-md overflow-hidden">
-            <h2 className="text-orange-600 text-xl font-bold mb-2">
-              {movie.name}
-            </h2>
-            <p className="text-gray-600">{movie.description}</p>
-            <button
-              onClick={onClose}
-              className="cursor-pointer mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm"
-            >
-              Close
-            </button>
-          </div>
+        {/* Movie Image */}
+        <img
+          src={movie.imgSource}
+          alt={movie.name}
+          className="w-full h-64 object-cover rounded-lg mb-5 shadow"
+        />
+
+        {/* Movie Info */}
+        <h2 className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+          {movie.name}
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          {movie.description}
+        </p>
+
+        {/* Close Button */}
+        <div className="flex justify-end">
+          <button
+            onClick={onClose}
+            className="cursor-pointer mt-2 bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-md font-medium transition"
+          >
+            Close
+          </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
